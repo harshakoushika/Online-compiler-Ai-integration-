@@ -1,0 +1,271 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Full page layout */
+body, html, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Main container */
+.compiler-container {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #eef2f3, #ffffff);
+  color: #222;
+  transition: 0.3s ease-in-out;
+}
+
+/* Dark mode */
+.compiler-container.dark {
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  color: #fff;
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Sections */
+.section {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Dropdown styling */
+select {
+  padding: 10px 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s;
+}
+.compiler-container.dark select {
+  background: #0e1621;
+  border: 1px solid #2c3e50;
+  color: #fff;
+}
+
+/* Code textarea */
+textarea {
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  margin-top: 10px;
+  background: #f7f9fa;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Fira Code", monospace;
+  resize: vertical;
+  transition: 0.3s;
+}
+.compiler-container.dark textarea {
+  background: #0d1117;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+}
+
+
+input {
+  flex: 1;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: 0.2s;
+}
+.compiler-container.dark input {
+  background: #0e1621;
+  border: 1px solid #30363d;
+  color: #fff;
+}
+
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  background: #0056d2;
+}
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+
+.theme-toggle {
+  float: right;
+  margin-bottom: 10px;
+  background: #ffce00;
+  color: #000;
+  font-weight: bold;
+}
+.theme-toggle:hover {
+  background: #e0b600;
+}
+
+.compiler-container.dark .theme-toggle {
+  background: #222;
+  color: #fff;
+}
+.compiler-container.dark .theme-toggle:hover {
+  background: #333;
+}
+
+h3 {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+pre {
+  background: #1e1e1e;
+  color: #00ff9d;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  white-space: pre-wrap;
+  min-height: 150px;
+  font-size: 15px;
+  font-family: "Fira Code", monospace;
+}
+
+.compiler-container:not(.dark) pre {
+  background: #f0f0f0;
+  color: #333;
+}
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.button-group button:last-child {
+  background: #6f42c1;
+}
+
+.button-group button:last-child:hover {
+  background: #5936a8;
+}
+
+.explanation-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f5f7fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.dark .explanation-box {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+.explanation-box h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  border-left: 4px solid #4f46e5;
+  padding-left: 10px;
+}
+
+.dark .explanation-box h4 {
+  border-left: 4px solid #818cf8;
+}
+
+
+
+.explanation-box p {
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+
+.line-block {
+  padding: 12px;
+  border-radius: 8px;
+  background: white;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+  border-left: 4px solid #10b981;
+}
+
+.line-block:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dark .line-block {
+  background: #2b2b2b;
+  border-left: 4px solid #34d399;
+}
+
+/* Code line styling */
+.line-code {
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  background: #eef2ff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.dark .line-code {
+  background: #3b3b3b;
+}
+
+
+.dryrun-box {
+  background: #fff7ed;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: pre-wrap;
+  border-left: 4px solid #f97316;
+}
+
+.dark .dryrun-box {
+  background: #2a2118;
+  border-left: 4px solid #fb923c;
+}
+
+.explanation-box {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

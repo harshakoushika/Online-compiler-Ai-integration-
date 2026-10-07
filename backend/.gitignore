@@ -1,0 +1,8 @@
+# Environment variables — NEVER commit this file
+.env
+
+# Dependencies
+node_modules/
+
+# Temp files
+tmp/
